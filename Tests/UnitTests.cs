@@ -31,5 +31,37 @@ namespace TravisCILab
         }
 
         // Implement 3 tests per operation, following a similar pattern as above
+        [Test]
+        public void Subtract_Valid_Collingham()
+        {
+            Assert.AreEqual(3, Program.Subtract("4","1"));
+            Assert.AreEqual(7, Program.Subtract("12", "5"));
+            Assert.AreEqual(1, Program.Subtract("3", "2"));
+        }
+
+        [Test]
+        public void Multiply_Valid_Collingham()
+        {
+            Assert.AreEqual(4, Program.Multiply("4", "1"));
+            Assert.AreEqual(60, Program.Multiply("12", "5"));
+            Assert.AreEqual(6, Program.Multiply("3", "2"));
+        }
+
+        [Test]
+        public void Divide_Valid_Collingham()
+        {
+            Assert.AreEqual(4, Program.Divide("4", "1"));
+            Assert.AreEqual(2, Program.Divide("10", "5"));
+            Assert.AreEqual(2, Program.Divide("4", "2"));
+        }
+
+        [Test]
+        public void Power_Valid_Collingham()
+        {
+            Assert.AreEqual(64, Program.Power("4", "3"));
+            Assert.AreEqual(100, Program.Power("10", "2"));
+            Assert.AreEqual(16, Program.Power("4", "2"));
+        }
+
     }
 }
